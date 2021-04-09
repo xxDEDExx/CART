@@ -1,0 +1,207 @@
+/* (A) ENTIRE PAGE */
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap');
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#cart-wrap {
+  /* font-family: 'Lato', arial, sans-serif;
+  display: flex; */
+  /* grid-template-columns: 70% 30%; */
+  /* margin: 0 auto; */
+  /* max-width: 1000px; */
+}
+/* --------------- Navbar ---------------- */
+h1 > .black {
+    color: var(--mainBlack);
+}
+h1 > .orange {
+    color: var(--primaryColor);
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(231, 226, 221);
+  z-index: 5;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.nav-icon {
+    font-size: 1.5rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 30%;
+  color: var(--mainWhite);
+}
+/* --------------- End of Navbar ---------------- */
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(100vh - 60px);
+  background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12%;
+}
+.banner {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  padding: 2rem;
+}
+.banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+.banner-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 1rem;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.banner-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+/* --------------- End of Hero ---------------- */
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+input.cart, button.cart {
+  /* font-weight: bold;
+  font-size: 1em;
+  padding: 10px; 
+  border: none;
+  color: var(--mainWhite);
+  background: var(--primaryColor);
+  cursor: pointer; */
+}
+
+/* (B) PRODUCTS LIST */
+#cart-products {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.p-item {
+  /* padding: 10px;
+  border: 1px solid #aaa;
+  text-align: center; */
+}
+.p-name {
+  /* text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.1em; */
+}
+.p-img { max-width: 180px; }
+.p-desc {
+  /* color: var(--mainWhite);
+  font-size: 0.9em;
+  line-height: 1.5em; */
+}
+.p-price {
+  /* font-weight: bold;
+  font-size: 1.1em;
+  margin: 10px 0; */
+}
+input.p-add {
+  width: 30%;
+  height: 30px;
+  background-color: var(--primaryColor);
+  color: var(--mainBlack);
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+input.p-add:focus {
+  border: 2px solid var(--mainBlack);
+}
+
+/* (D) CURRENT SHOPPING CART */
+#cart-items {
+  display: inline-block;
+  padding: 10px;
+  background: var(--primaryColor);
+  position: fixed;
+  right: 0;
+  top: 60px;
+  width: 30vw;
+  min-height: 100vh;
+  z-index: 3;
+  /* visibility: hidden; */
+}
+
+.c-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.c-name {
+  /* width: 100%;
+  font-size: 1.3em;
+  line-height: 1.5em; */
+}
+.c-del { width: 20%; }
+.c-qty {
+  /* width: 75%;
+  font-size: 1em; */
+}
+input.c-empty, input.c-checkout {
+  /* width: 100%;
+  margin-top: 10px; */
+}
+
+/* (E) RESPONSIVE */
+/* @media screen AND (max-width: 768px) {
+  #cart-wrap { grid-template-columns: 60% 40%; }
+  #cart-products { grid-template-columns: auto; }
+} */

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple JS Cart</title>
+
+    <!-- (A) CSS + JS -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="cart.css">
+    <script src="jQuery.js"></script>
+    <script src="click.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+  </head>
+  <body>
+    <div id="cart-wrap">
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar-center">
+          <span class="nav-icon">
+              <i class="fas fa-bars"></i>
+          </span>
+          <h1><span class="black">comfy</span><span class="orange">furnitures</span></h1>
+          <div class="cart-btn">
+              <span class="nav-icon">
+                  <i class="fas fa-cart-plus"></i>
+              </span>
+              <div class="cart-items"></div>
+          </div>
+       </div>
+      </nav>
+      <!-- end of navbar -->
+      <!-- hero -->
+      <header class="hero">
+          <div class="banner">
+            <h1 class="banner-title">furniture collection</h1>
+            <button class="banner-btn">shop now</button>
+          </div>
+      </header>
+  <!-- end of hero -->
+      <div class="section-title">
+        <h2>our products</h2>
+    </div>
+      <!-- (B) PRODUCTS LIST -->
+      <div id="cart-products"></div>
+
+      <!-- (C) CURRENT CART -->
+      <div id="cart-items"></div>
+    </div>
+  </body>
+</html>
